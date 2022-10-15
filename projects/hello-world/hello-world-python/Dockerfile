@@ -1,9 +1,9 @@
-FROM python3:alpine3.10
+FROM python:3.8-slim-buster
 WORKDIR /app 
 COPY . /app
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 EXPOSE 5000
-CMD python ./launch.py
+CMD python3 ./launch.py
 
 #COPY requirements.txt /app/requirements.txt
 #ENTRYPOINT ["python", "./launch.py"]
